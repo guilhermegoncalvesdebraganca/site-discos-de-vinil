@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Fale Conosco</title>
+     <style>
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .password-validation {
+        margin-top: 10px;
+    }
+    .password-validation ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .password-validation li {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .password-validation li.valid {
+        color: green;
+    }
+    .password-match {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .password-match.valid {
+        color: green;
+    }
+    .password-match.invalid {
+        color: red;
+    }
+     </style>
+   
+
+</head>
+<style>
+    body{
+        background-color:#ACAD94;
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="distancia">
+        </img class="logo" src="./imagens/disco-de-vinil.png" alt="logo discos">
+            <h1>Discos de Vinil</h1>
+        </div>
+
+    <nav class="nav">
+        <ul class="menu">
+        <li><a href="index (1).html"><p class="">Início</p></a></li>
+        <li><a href="generos.html"><p class="">Gêneros</p></a></li>
+        <li><a href="artistas.html"><p class="corletras">Artistas</p></a></li>
+        <li><a href="promocoes.html"><p class="corletras">Promoções</p></a></li>
+        <li><a href="lotes.html"><p class="corletras">Lotes</p></a></li>
+        </ul>
+    </nav>
+    <form id="signupForm" onsubmit="return validateForm()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required oninput="validatePassword()"><br><br>
+        <label for="senhaRepetida">Digite novamente:</label>
+        <input type="password" id="senhaRepetida" name="senhaRepetida" required oninput="validatePassword()"><br><br>
+        <div class="password-validation">
+            <ul>
+                <li id="length">Pelo menos 8 caracteres</li>
+                <li id="uppercase">Pelo menos uma letra maiúscula</li>
+                <li id="special">Pelo menos um caractere especial</li>
+                <li id="number">Pelo menos um número</li>
+            </ul>
+        </div><br><br>
+        <div class="password-match" id="passwordMatch">As senhas devem coincidir.</div><br><br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required><br><br>
+        <label for="estado">Estado do Sudeste:</label>
+        <select id="estado" name="estado" required onchange="habilitarCidades()">
+            <option value="">Selecione...</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="ES">Espírito Santo</option>
+        </select><br><br>
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="cidade" disabled>
+            <option value="">Selecione um estado primeiro</option>
+        </select><br><br>
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50" maxlength="200" oninput="updateCharCount()"></textarea>
+        <div class="char-counter" id="charCounter">0/200 caracteres</div>
+        <div class="error-message" id="errorMessage"></div><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</main>
+<footer>
+    <h3>OFERTA</h3>
+    <p>CADASTRE SEU E-MAIL E GANHE 10% DE DESCONTO NA PRIMEIRA COMPRA! NÃO PERCA ESSA INCRÍVEL OFERTA!</p>
+     <a href="faleconosco.html">Faça seu cadastro</a>
+</footer>
+<script src="java.js"></script>
+
+        
+     <footer class="footer">
+        <h3>OFERTA</h3>
+         <p>CADASTRE SEU E-MAIL E GANHE 10% DE DESCONTO NA PRIMEIRA COMPRA! NÃO PERCA ESSA INCRÍVEL OFERTA!</p>
+          <a href="faleconosco.html">Faça seu cadastro</a>
+        </footer>
+        <script src="./java.js"></script>
+ 
+    
+</body>
+</html>
